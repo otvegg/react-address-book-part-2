@@ -38,7 +38,7 @@ const ContactView = () => {
     const toggleUpdate = () => {
         setUpdateStatus(!updateStatus);
         if (!updateStatus) {
-            setEditableContact({ ...contact }); // clone current contact
+            setEditableContact({ ...contact }); 
         }
     };
 
@@ -115,7 +115,7 @@ const ContactView = () => {
             <p><strong>Job:</strong> {contact.jobTitle ? contact.jobTitle : "Not listed"}</p>
             <p><strong>Coordinates:</strong> {contact.latitude ?  contact.latitude + " "+ contact.longitude : "Not listed"}</p>        
         </div> */}
-        {contact?.latitude && contact?.longitude ?
+        {(contact?.latitude && contact?.longitude)&&
             <MapContainer center={[contact.latitude, contact.longitude]} zoom={13} style={{ height: '400px', width: '100%' }}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -127,7 +127,7 @@ const ContactView = () => {
                     </Popup>
                 </Marker>
             </MapContainer> 
-            : <></>}
+        }
 
         <button onClick={onDelete}>Delete contact</button>
     </div>
