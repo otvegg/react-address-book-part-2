@@ -78,9 +78,9 @@ const ContactView = () => {
             {updateStatus ? (
                 <>
                 <label>Street*:</label>
-                <input name="street" value={editableContact?.street || ''} onChange={handleChange} /><br/>
+                <input required={true} name="street" value={editableContact?.street || ''} onChange={handleChange} /><br/>
                 <label>City*:</label>
-                <input name="city" value={editableContact?.city || ''} onChange={handleChange} /><br/>
+                <input required={true} name="city" value={editableContact?.city || ''} onChange={handleChange} /><br/>
                 <label>Email:</label>
                 <input name="email" value={editableContact?.email || ''} onChange={handleChange} /><br/>
                 <label>Favourite Colour:</label>
