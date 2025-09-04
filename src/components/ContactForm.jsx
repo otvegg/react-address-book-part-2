@@ -31,12 +31,7 @@ function ContactForm() { // , onHire
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                "firstName": info.firstName,
-                "lastName": info.lastName,
-                street: info.street,
-                city: info.city
-            })}
+            body: JSON.stringify(info)}
             ).then(res => res.json())
             .then(data => {
                 if (data.ok == false) console.log("Error at post request")

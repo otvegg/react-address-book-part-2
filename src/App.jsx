@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Dashboard from './components/Dashboard';
 import ContactView from './components/ContactView';
@@ -12,6 +12,7 @@ function App() {
     return (
         <BrowserRouter>
             <ApiContext.Provider value={{baseUrl}}>
+                <Link to={'/'}>Go Dashboard</Link>
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path="contact/:id" element={<ContactView/>}/>
