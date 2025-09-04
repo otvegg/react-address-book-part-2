@@ -6,8 +6,8 @@ function ContactList(props) {
   return (
     <ul>
       {contacts.map((contact, index) => (
-        <li key={index}>
-            <Link to={`contact/${contact.id}`} >
+        <li key={index} style={{ width:'200px'}}>
+            <Link to={`contact/${contact.id}`}  >
                 <h3>{contact.firstName} {contact.lastName}</h3>
             </Link>
         </li>
