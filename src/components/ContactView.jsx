@@ -44,8 +44,8 @@ const ContactView = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEditableContact(prev => ({
-            ...prev,
+        setEditableContact(values => ({
+            ...values,
             [name]: value
         }));
     };

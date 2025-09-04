@@ -38,8 +38,7 @@ function Dashboard() {
     }
 
     function handleChange(e) {
-        const { value } = e.target
-        setFilter(value)
+        setFilter(e.target.value)
     }
 
     return (
